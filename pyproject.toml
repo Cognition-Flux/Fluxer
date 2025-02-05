@@ -1,0 +1,67 @@
+[tool.black]
+# Configuración de Black para el formateo automático del código.
+# Esta herramienta se encarga de reformatear el código de forma consistente.
+line-length = 88
+target-version = ["py37"]
+include = '\.pyi?$'
+# Se excluye el archivo "foo.py" desde la raíz del proyecto.
+extend-exclude = '''
+# A regex preceded with ^/ will apply only to files and directories
+# in the root of the project.
+^/foo.py  # exclude a file named foo.py in the root of the project
+'''
+
+
+[tool.flake8]
+# Configuración de Flake8 para la revisión de estilo y errores.
+max-line-length = 88
+max-complexity = 10
+# Ignoramos ciertos errores que Black maneja automáticamente:
+extend-ignore = [
+    "E203", # Espacios antes de ':' (compatibilidad con Black)
+    "W503", # Línea antes de operador binario (compatibilidad con Black)
+]
+# Selección de códigos a revisar. Los plugins adicionales (como flake8-quotes) 
+# se activan mediante estos códigos.
+select = [
+    "E", # Errores de pycodestyle
+    "W", # Avisos de pycodestyle
+    "F", # Errores de pyflakes
+    "B", # Avisos de flake8-bugbear
+    "C", # Revisiones de complejidad (mccabe)
+    #"D",    # (flask8-docstrings) Descomentar si se desea revisar docstrings
+    "I",   # Orden de importaciones (flake8-import-order)
+    "N",   # Naming (pep8-naming)
+    "Q",   # Comillas de strings (flake8-quotes)
+    "S",   # Seguridad (flake8-bandit)
+    "ANN", # Anotaciones de tipos
+    "BLK", # Integración con Black
+    "ERA", # Revisión de patrones indeseados (flake8-eradicate)
+]
+# Configuración para que Flake8 sepa cómo agrupar y ordenar las importaciones.
+import-order-style = "google"
+application-import-names = ["lgraph_essentials"]
+import-order-grouped-imports = true
+
+# Configuración de docstrings
+#docstring-convention = "google"
+
+# Excluir directorios y archivos que no se desean revisar.
+exclude = [".git", "__pycache__", "build", "dist", "*.pyc", "*.egg-info"]
+
+# Configuración del formato de comillas:
+# Se utiliza flake8-quotes para imponer el uso de comillas dobles en strings y docstrings,
+# manteniendo la coherencia con Black.
+inline-quotes = "double"    # Para strings en una sola línea.
+multiline-quotes = "double" # Para strings que abarcan múltiples líneas.
+docstring-quotes = "double" # Para los docstrings.
+
+# Estadísticas
+statistics = true
+count = true
+
+[tool.isort]
+# (Opcional) Integración de isort con Black para ordenar automáticamente las importaciones.
+profile = "black"
+line_length = 88
+known_first_party = ["lgraph_essentials"]
