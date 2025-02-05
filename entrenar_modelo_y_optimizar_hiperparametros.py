@@ -39,12 +39,12 @@ warnings.filterwarnings("ignore")
 # n_trials: Define la cantidad de intentos en la búsqueda de hiperparámetros óptimos usando Optuna.
 # Un número mayor de trials permite explorar un espacio más amplio, incrementando la posibilidad
 # de encontrar una configuración óptima, aunque a costa de mayor tiempo computacional.
-n_trials: int = 5
+n_trials: int = 50
 
 # epochs: Especifica cuántas épocas (pasadas completas del conjunto de entrenamiento)
 # se realizarán durante el entrenamiento del modelo. Más épocas pueden permitir un aprendizaje
 # más profundo, pero también aumentan el riesgo de sobreajuste.
-epochs: int = 5
+epochs: int = 200
 
 
 def prepare_time_series(

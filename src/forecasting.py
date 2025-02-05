@@ -347,7 +347,7 @@ class TransformerForecaster(nn.Module):
 
             if e % 2 == 0:
                 logger.info(
-                    f"Optimizing hyperparameters with {epochs} epochs: Epoch {e}/{epochs}: Train Loss: {avg_train_loss:.4f}, Test Loss: {avg_test_loss:.4f}"
+                    f"Iterando: Epoch {e}/{epochs}: Train Loss: {avg_train_loss:.4f}, Test Loss: {avg_test_loss:.4f}"
                 )
 
             if trial is not None:
