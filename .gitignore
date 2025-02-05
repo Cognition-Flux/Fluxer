@@ -169,3 +169,27 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Database files
+*.db
+*.sql
+*.sqlite
+*.sqlite3
+**/*.db
+**/*.sql
+**/*.sqlite
+**/*.sqlite3
+
+# Cache files
+*.cache
+**/*.cache
+.cached
+**/__pycache__/
+**/.cached
+**/*.py[cod]
+.sass-cache/
+**/.sass-cache
+**/.eslintcache
+**/.parcel-cache
+**/.webpack.cache
+**/*.cache.*
