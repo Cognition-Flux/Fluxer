@@ -4,10 +4,12 @@
 Este repositorio ofrece un marco modular para la predicción de series temporales, donde se aprovecha la potencia de PyTorch para implementar un modelo Transformer personalizado capaz de capturar y procesar patrones complejos en datos secuenciales. Además, integra Optuna para la optimización automática de hiperparámetros, lo que permite ajustar eficientemente el proceso de entrenamiento y mejorar la precisión de las predicciones. Gracias a la generación de datos sintéticos y técnicas avanzadas de preprocesamiento, la herramienta facilita desde la experimentación hasta la visualización detallada de resultados, constituyéndose en una solución integral para proyectos de forecasting basado en aprendizaje profundo.
 
 ---
-
+![Simulación](figuras/simulation.png)
+---
 ## Tabla de Contenidos
 
 - [Forecast con Transformer](#forecast-con-transformer)
+  - [](#)
   - [Tabla de Contenidos](#tabla-de-contenidos)
   - [Descripción General](#descripción-general)
   - [Características](#características)
@@ -196,8 +198,6 @@ Este módulo proporciona un dashboard interactivo para el análisis de hiperpar�
 ## Visualización
 
 Al final del análisis, puedes ver una simulación de ejemplo (guardada en `figuras/simulation.png`) que demuestra los resultados del forecasting:
-
-![Simulación](figuras/simulation.png)
 
 ---
 
